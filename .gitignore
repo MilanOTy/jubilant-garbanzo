@@ -1,0 +1,18 @@
+# meta
+*.swp
+*.log
+.DS_Store
+.metadata
+.idea
+.project
+
+.vscode
+
+# npm
+npm-debug.log
+node_modules
+npm-debug.*
+
+# Tests
+coverage
+.nyc_output

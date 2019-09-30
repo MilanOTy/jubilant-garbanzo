@@ -1,0 +1,70 @@
+{
+  "name": "@neeo/cli",
+  "version": "1.1.0",
+  "description": "NEEO SDK CLI",
+  "bugs": "https://github.com/NEEOInc/neeo-sdk-toolkit/issues",
+  "repository": "https://github.com/NEEOInc/neeo-sdk-toolkit/tree/master/cli",
+  "public": true,
+  "scripts": {
+    "start": "node ./neeo-cli.js",
+    "test": "nyc mocha \"test/**/*.js\"",
+    "eslint": "eslint index.js lib/* test/**/*.js"
+  },
+  "keywords": [
+    "NEEO",
+    "Brain",
+    "Remote",
+    "IoT",
+    "SDK"
+  ],
+  "author": "NEEO Inc.",
+  "license": "MIT",
+  "bin": {
+    "neeo-cli": "./neeo-cli.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
+    "debug": "^3.1.0"
+  },
+  "peerDependencies": {
+    "neeo-sdk": "*"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.1.1",
+    "mockery": "^2.1.0",
+    "nyc": "^13.0.1",
+    "sinon": "^5.1.0",
+    "sinon-chai": "^3.1.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "statements": 90,
+    "branches": 90,
+    "functions": 90,
+    "lines": 90,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "all": true,
+    "reporter": [
+      "text-summary",
+      "lcov"
+    ]
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/**",
+    "neeo-cli.js"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
+}
